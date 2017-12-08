@@ -1,2 +1,5 @@
 /uiDev/node_modules/
 asserts/
+/biz/.project
+/biz/.settings
+/biz/target/
