@@ -290,6 +290,7 @@
         watch:{
             $route:function(){
                 this.showModalSearchResult = false;
+                this.showCollectionServ = false;
             }
         },
         methods: {
