@@ -1,0 +1,75 @@
+{
+    "serviceID": "0001",
+    "serviceName": "评奖评优",
+    "data": [
+    {
+        "icon": "android-person-add",       
+        "text": "评奖查询",
+        "router": "",
+        "leaf": true,
+        "subMenu":
+        {
+            "data": [
+            {
+                "icon": "ios-paper",
+                "text": "获奖名单查询",
+                "router": "page1",
+                "leaf": false,
+                "subMenu":
+                {
+                    "data": []
+                }
+            },
+            {
+                "icon": "ios-paper",
+                "text": "获奖名单公示查询",
+                "router": "page2",
+                "leaf": false,
+                "subMenu":
+                {
+                    "data": []
+                }
+            }]
+        }
+    },
+    {
+        "icon": "trophy",
+        "text": "评奖评优",
+        "router": "",
+        "leaf": true,
+        "subMenu":
+        {
+            "data": [
+            {
+                "icon": "ios-paper",
+                "text": "我的评奖评优",
+                "router": "page3",
+                "leaf": false,
+                "subMenu":
+                {
+                    "data": []
+                }
+            },
+            {
+                "icon": "ios-paper",
+                "text": "集体评奖评优",
+                "router": "page4",
+                "leaf": false,
+                "subMenu":
+                {
+                    "data": []
+                }
+            }]
+        }
+    },
+    {
+        "icon": "compass",
+        "text": "服务介绍",
+        "router": "page5",
+        "leaf": false,
+        "subMenu":
+        {
+            "data": []
+        }
+    }]
+}

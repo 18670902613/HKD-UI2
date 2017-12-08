@@ -1,0 +1,9 @@
+{
+    "data":
+    {
+        "name": "周旦",
+        "image": "../../src/images/user-40x40_06.png",
+        "msgCount": 3,
+        "department": "财务部"      
+    }
+}

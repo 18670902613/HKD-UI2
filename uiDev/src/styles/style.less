@@ -1,0 +1,160 @@
+.clearfix {
+    &:before,
+    &:after {
+        display: table;
+
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.ellipsis {
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vertical-center-modal {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    .ivu-modal {
+        top: 0;
+    }
+}
+
+.service-card {
+    float: left;
+
+    margin-right: 22px;
+    margin-bottom: 22px;
+    border-radius: 0;
+    padding: 40px 0;
+    width: 200px;
+    height: 280px;
+
+    text-align: center;
+
+    box-shadow: 0 0 5px #e5e5e5;
+
+    animation: service-card-in .2s linear;
+    a {
+        color: #484848;
+        .service-icon {
+            margin-bottom: 15px;
+            height: 60px;
+            img {
+                border: 2px solid #fff;
+                border-radius: 50%;
+            }
+        }
+        .service-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .btn-collection,
+        .btn-collection-batch {
+            display: none;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            font-size: 20px;
+
+            color: #df6657;
+            .ivu-icon {
+                padding: 10px;
+            }
+        }
+    }
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+    &:hover {
+        border-color: #44b549;
+
+        background-color: #44b549;
+        a {
+            color: #fff;
+            .btn-collection {
+                display: block;
+            }
+        }
+    }
+}
+
+.home-page {
+    .ivu-page-item-jump-next,
+    .ivu-page-item-jump-prev,
+    .ivu-page-next,
+    .ivu-page-prev,
+    .ivu-page-item {
+        border-radius: 50%;
+        &:hover {
+            border-color: #44b549;
+            a {
+                color: #44b549;
+            }
+        }
+    }
+    .ivu-page-disabled {
+        &:hover {
+            border-color: #dddee1;
+            a {
+                color: #ccc;
+            }
+        }
+    }
+    .ivu-page-item-active {
+        border-color: #44b549;
+
+        background-color: #44b549;
+        &:hover {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.ivu-table-body {
+    tr {
+        &.ivu-table-row-hover {
+            td {
+                background-color: #fffeeb;
+            }
+        }
+    }
+}
+
+.no-result {
+    height: 100%;
+
+    background: url(../images/no_search_result.png) no-repeat center;
+    .no-result-msg {
+        position: absolute;
+        bottom: 30%;
+
+        width: 100%;
+
+        font-size: 16px;
+        text-align: center;
+
+        color: #999;
+    }
+}
+
+@keyframes service-card-in {
+    from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
