@@ -3,6 +3,12 @@ package com.biz.run;
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallConfig;
 import com.alibaba.druid.wall.WallFilter;
+import com.biz.portal.entity.Sp_appservice;
+import com.biz.portal.router.PortalHome;
+import com.biz.sa.entity.SA_opPerson;
+import com.biz.sa.entity.Sa_opauthorize;
+import com.biz.sa.entity.Sa_oporg;
+import com.biz.sa.router.OrgRouter;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -38,7 +44,9 @@ public class MainConfig extends JFinalConfig {
 	}
 
 	public void configRoute(Routes me) {
-		me.add("/", IndexController.class); // 第三个参数为该Controller的视图存放路// 第三个参数省略时默认与第个参数相同，在此即为 "/blog"
+		me.add("/", IndexController.class);
+		me.add(new OrgRouter());
+		me.add(new PortalHome());
 	}
 
 	public void configEngine(Engine me) {
@@ -64,6 +72,10 @@ public class MainConfig extends JFinalConfig {
 		me.add(dp);
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(dp);
 		me.add(arp);
+		arp.addMapping("sa_opperson", "pid", SA_opPerson.class);
+		arp.addMapping("sp_appservice", "pid", Sp_appservice.class);
+		arp.addMapping("sa_oporg", "pid", Sa_oporg.class);
+		arp.addMapping("sa_opauthorize", "pid", Sa_opauthorize.class);
 		arp.setShowSql(true);
 	}
 

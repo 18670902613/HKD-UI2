@@ -1,7 +1,7 @@
 
-jdbcUrl = jdbc:mysql://127.0.0.1/zodnup?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+jdbcUrl = jdbc:mysql://127.0.0.1/hnust_2p?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
 user = root
-password = 123456
+password = 123
 databaseType = mysql
 
 
