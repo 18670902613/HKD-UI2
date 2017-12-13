@@ -58,7 +58,21 @@ const config = {
     },
     devServer: {
         inline: true,
-        port: 9090
+        port: 9090,
+        proxy: {
+            '/biz': {
+                target: {
+                    "host": "localhost",
+                    "protocol": 'http:',
+                    "port": 80
+                },
+                changeOrigin: true,
+                secure: false,
+                pathRewrite: {
+                    '^/biz': ''
+                }
+            }
+        }
     },
     plugins: [
         new ExtractTextPlugin('main.css')

@@ -13,9 +13,11 @@ public class OrgUtils {
 		List<String> orgIDs = new ArrayList<String>();
 		for(Sa_oporg o : orgs) {
 			String pID = o.get("pID");
-			String id = pID.split("@")[1];
-			if(!orgIDs.contains(id)) {
-				orgIDs.add(id);
+			if(pID.contains("@")) {
+				String id = pID.split("@")[1];
+				if(!orgIDs.contains(id)) {
+					orgIDs.add(id);
+				}
 			}
 		}
 		return orgIDs;

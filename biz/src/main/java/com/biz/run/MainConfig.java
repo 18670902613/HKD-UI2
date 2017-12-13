@@ -8,7 +8,8 @@ import com.biz.portal.router.PortalHome;
 import com.biz.sa.entity.SA_opPerson;
 import com.biz.sa.entity.Sa_opauthorize;
 import com.biz.sa.entity.Sa_oporg;
-import com.biz.sa.router.OrgRouter;
+import com.biz.sa.entity.Sp_appservicepermission;
+import com.biz.sa.router.SaRouter;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -45,7 +46,7 @@ public class MainConfig extends JFinalConfig {
 
 	public void configRoute(Routes me) {
 		me.add("/", IndexController.class);
-		me.add(new OrgRouter());
+		me.add(new SaRouter());
 		me.add(new PortalHome());
 	}
 
@@ -76,6 +77,7 @@ public class MainConfig extends JFinalConfig {
 		arp.addMapping("sp_appservice", "pid", Sp_appservice.class);
 		arp.addMapping("sa_oporg", "pid", Sa_oporg.class);
 		arp.addMapping("sa_opauthorize", "pid", Sa_opauthorize.class);
+		arp.addMapping("Sp_appservicepermission", "pid", Sp_appservicepermission.class);
 		arp.setShowSql(true);
 	}
 
