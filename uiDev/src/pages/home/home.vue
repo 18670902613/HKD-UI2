@@ -36,9 +36,9 @@
                                 :class="{ active : index == 0 }"  
                                 @click.native="tagChangeEvent('filter-by-other')" 
                                 :key="department.id" 
-                                :category-key="departments.key" 
-                                :category-type="department.type">
-                                {{ department.text }}
+                                :category-key="departments.pCreatorDeptID" 
+                                :category-type="department.pCreatorDeptID">
+                                {{ department.pCreatorDeptName }}
                             </Tag>
                         </div>
                         <Tooltip content="更多部门" placement="left">
@@ -150,14 +150,14 @@ export default {
           // 用户信息
           this.user = user;
           // 部门数据
-          this.departments.data = departments.data.data;
+          this.departments.data = departments;
           // 通知公告和新闻数据
           this.news = news.data.data;
           // 该用户权限下的所有服务数据
           this.services.data = service;
-          this.services.total = this.services.data.length;
+          this.services.total = service.length;
           // 该用户的收藏列表
-          this.collections = [...collections.data.data];
+          this.collections = collections;
           // 过滤器数据重置
           this.filterReset();
         })

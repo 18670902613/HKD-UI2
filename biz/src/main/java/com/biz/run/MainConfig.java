@@ -4,6 +4,7 @@ import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallConfig;
 import com.alibaba.druid.wall.WallFilter;
 import com.biz.portal.entity.Sp_appservice;
+import com.biz.portal.entity.Sp_appservicestore;
 import com.biz.portal.router.PortalHome;
 import com.biz.sa.entity.SA_opPerson;
 import com.biz.sa.entity.Sa_opauthorize;
@@ -78,6 +79,7 @@ public class MainConfig extends JFinalConfig {
 		arp.addMapping("sa_oporg", "pid", Sa_oporg.class);
 		arp.addMapping("sa_opauthorize", "pid", Sa_opauthorize.class);
 		arp.addMapping("Sp_appservicepermission", "pid", Sp_appservicepermission.class);
+		arp.addMapping("Sp_appservicestore", "pid", Sp_appservicestore.class);
 		arp.setShowSql(true);
 	}
 

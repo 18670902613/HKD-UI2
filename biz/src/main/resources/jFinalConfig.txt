@@ -1,5 +1,5 @@
 //数据库配置
-jdbcUrl = jdbc:mysql://127.0.0.1/hnust_2p?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+jdbcUrl = jdbc:mysql://127.0.0.1/hkd-ui2?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
 user = root
 password = 123
 databaseType = mysql
