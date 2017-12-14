@@ -76,7 +76,6 @@ export const getLeftMenuData = (serviceID) => axios
 }))
 .then(function (response) {
   let menu = {};
-  debugger
   menu = response.data.menu || {};
   return menu;
 })
