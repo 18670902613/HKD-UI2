@@ -20,5 +20,4 @@ public class OrgController {
 	public List<SaOporg> findOrgByPersonCode(@Param(value = "pCode")String pCode) {
 		return orgService.findOrgByPersonCode(pCode);
 	}
-	
 }
