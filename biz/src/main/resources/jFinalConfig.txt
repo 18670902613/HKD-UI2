@@ -1,8 +1,0 @@
-//数据库配置
-jdbcUrl = jdbc:mysql://127.0.0.1/hkd-ui2?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
-user = root
-password = 123
-databaseType = mysql
-
-//开发模式运行
-devMode = true
