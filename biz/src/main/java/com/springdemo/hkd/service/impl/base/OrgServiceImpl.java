@@ -15,7 +15,6 @@ public class OrgServiceImpl implements OrgService{
 	@Autowired
 	private OrgJPAOper orgJPAOper;
 	
-	@Override
 	public List<SaOporg> findOrgByPersonCode(String pCode) {
 		return orgJPAOper.findOrgByPersonCode(pCode);
 	}

@@ -16,7 +16,6 @@ public class OrgWithAuthServiceImpl implements OrgWithAuthService {
 	@Autowired
 	protected EntityManager em;
 
-	@Override
 	public List<SaOpauthorize> findAuthByOrgID(List<String> orgPIDs) {
 		// 根据组织获取所拥有的角色
 		StringBuffer getRoleSql = new StringBuffer();

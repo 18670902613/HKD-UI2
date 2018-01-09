@@ -17,23 +17,19 @@ public class PersonServiceImpl implements PersonService {
 	@Autowired
 	private PersonJPAOper personJPAOper;
 
-	@Override
 	public List<SaOpperson> findAllWithLimit(int limit, int offset) {
 		return personJPAOper.findAllWithLimit(limit, offset);
 	}
 
-	@Override
 	public void savePerson(SaOpperson person) {
 		personJPAOper.save(person);
 	}
 
-	@Override
 	public void delete(String pCode) {
 		personJPAOper.delete(pCode);
 
 	}
 
-	@Override
 	public List<SaOpperson> findByDept(String deptCode) {
 		return personJPAOper.findByDept(deptCode);
 	}
